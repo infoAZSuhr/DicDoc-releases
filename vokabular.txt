@@ -8,81 +8,56 @@
 # Stift/Edit-Button auf GitHub eine Zeile hinzufuegen und committen.
 #
 # Ein Begriff pro Zeile. Zeilen mit "#" sind Kommentare und werden ignoriert.
+#
+# WICHTIG - gemessene harte Grenze: Whisper beruecksichtigt vom Prompt nur die
+# LETZTEN ca. 223 Tokens, der Rest wird vorne stillschweigend abgeschnitten.
+# Diese Liste ist bewusst kompakt gehalten (ca. 200 Tokens, mit Sicherheitsabstand)
+# und mit dem echten Tokenizer nachgemessen - nicht einfach nach Zeichenzahl
+# schaetzen. Vor dem Ergaenzen weiterer Begriffe die Gesamtlaenge pruefen, sonst
+# fallen die aeltesten (vordersten) Begriffe unbemerkt weg.
 
 # Anatomie
 Hornhaut
-Bindehaut
-Lederhaut
-Regenbogenhaut
-Iris
-Pupille
-Linse
-Glaskoerper
 Netzhaut
 Makula
 Sehnerv
-Papille
-Fundus
+Glaskoerper
 Kammerwinkel
-Vorderkammer
 
 # Untersuchung / Messwerte
 Visus
-Refraktion
 Augeninnendruck
-Tonometrie
-Perimetrie
-Gesichtsfeld
 Spaltlampe
-Ophthalmoskopie
-Biometrie
 OCT
-Optische Kohaerenztomographie
-Fluoreszenzangiographie
+Perimetrie
 
 # Diagnosen
 Katarakt
-Grauer Star
 Glaukom
-Gruener Star
-Makuladegeneration
-diabetische Retinopathie
 Uveitis
-Blepharitis
-Konjunktivitis
 Keratitis
-Trockenes Auge
-Astigmatismus
-Myopie
-Hyperopie
-Presbyopie
+Pterygium
 Amblyopie
 Strabismus
+Nystagmus
 Ptosis
-Ektropium
-Entropium
 Chalazion
 Hordeolum
 Netzhautabloesung
 Amotio retinae
-Glaskoerperblutung
 Keratokonus
-Rhegmatogene Laesion
+Zentralvenenverschluss
+Makulaforamen
+Hyphaema
 
 # Eingriffe / Therapie
 Phakoemulsifikation
 Vitrektomie
-YAG-Kapsulotomie
+Trabekulektomie
 Intraokularlinse
-Hornhauttransplantation
-Kontaktlinse
+Anti-VEGF-Injektion
 
 # Haeufige Diktat-Woerter
-Anamnese
-Befund
-Diagnose
-Therapie
-Medikation
-Verlaufskontrolle
-Ueberweisung
+Mydriasis
+Miosis
 beidseits
