@@ -1,0 +1,88 @@
+# Zentrales medizinisches Vokabular fuer DicDoc
+#
+# Diese Datei wird von jeder DicDoc-Installation beim Start automatisch
+# abgerufen: neue Begriffe hier werden lokal ergaenzt (nur lesend/einseitig -
+# lokale Aenderungen einzelner PCs werden NICHT hierher zurueckgeschrieben).
+#
+# Um einen Begriff fuer ALLE Praxis-PCs verfuegbar zu machen: hier ueber den
+# Stift/Edit-Button auf GitHub eine Zeile hinzufuegen und committen.
+#
+# Ein Begriff pro Zeile. Zeilen mit "#" sind Kommentare und werden ignoriert.
+
+# Anatomie
+Hornhaut
+Bindehaut
+Lederhaut
+Regenbogenhaut
+Iris
+Pupille
+Linse
+Glaskoerper
+Netzhaut
+Makula
+Sehnerv
+Papille
+Fundus
+Kammerwinkel
+Vorderkammer
+
+# Untersuchung / Messwerte
+Visus
+Refraktion
+Augeninnendruck
+Tonometrie
+Perimetrie
+Gesichtsfeld
+Spaltlampe
+Ophthalmoskopie
+Biometrie
+OCT
+Optische Kohaerenztomographie
+Fluoreszenzangiographie
+
+# Diagnosen
+Katarakt
+Grauer Star
+Glaukom
+Gruener Star
+Makuladegeneration
+diabetische Retinopathie
+Uveitis
+Blepharitis
+Konjunktivitis
+Keratitis
+Trockenes Auge
+Astigmatismus
+Myopie
+Hyperopie
+Presbyopie
+Amblyopie
+Strabismus
+Ptosis
+Ektropium
+Entropium
+Chalazion
+Hordeolum
+Netzhautabloesung
+Amotio retinae
+Glaskoerperblutung
+Keratokonus
+Rhegmatogene Laesion
+
+# Eingriffe / Therapie
+Phakoemulsifikation
+Vitrektomie
+YAG-Kapsulotomie
+Intraokularlinse
+Hornhauttransplantation
+Kontaktlinse
+
+# Haeufige Diktat-Woerter
+Anamnese
+Befund
+Diagnose
+Therapie
+Medikation
+Verlaufskontrolle
+Ueberweisung
+beidseits
