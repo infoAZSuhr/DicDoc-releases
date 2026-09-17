@@ -9,55 +9,12 @@
 #
 # Ein Begriff pro Zeile. Zeilen mit "#" sind Kommentare und werden ignoriert.
 #
+# Bewusst leer: nur Begriffe eintragen, die in der Praxis tatsaechlich falsch
+# erkannt werden - nicht vorab moeglichst viele. Fuer einzelne bekannte
+# Verwechslungen (z.B. "Rechtsmatogen" statt "Rhegmatogen") eignet sich in der
+# App die Korrekturen-Verwaltung oft besser, da sie kein Token-Budget hat.
+#
 # WICHTIG - gemessene harte Grenze: Whisper beruecksichtigt vom Prompt nur die
 # LETZTEN ca. 223 Tokens, der Rest wird vorne stillschweigend abgeschnitten.
-# Diese Liste ist bewusst kompakt gehalten (ca. 200 Tokens, mit Sicherheitsabstand)
-# und mit dem echten Tokenizer nachgemessen - nicht einfach nach Zeichenzahl
-# schaetzen. Vor dem Ergaenzen weiterer Begriffe die Gesamtlaenge pruefen, sonst
-# fallen die aeltesten (vordersten) Begriffe unbemerkt weg.
-
-# Anatomie
-Hornhaut
-Netzhaut
-Makula
-Sehnerv
-Glaskoerper
-Kammerwinkel
-
-# Untersuchung / Messwerte
-Visus
-Augeninnendruck
-Spaltlampe
-OCT
-Perimetrie
-
-# Diagnosen
-Katarakt
-Glaukom
-Uveitis
-Keratitis
-Pterygium
-Amblyopie
-Strabismus
-Nystagmus
-Ptosis
-Chalazion
-Hordeolum
-Netzhautabloesung
-Amotio retinae
-Keratokonus
-Zentralvenenverschluss
-Makulaforamen
-Hyphaema
-
-# Eingriffe / Therapie
-Phakoemulsifikation
-Vitrektomie
-Trabekulektomie
-Intraokularlinse
-Anti-VEGF-Injektion
-
-# Haeufige Diktat-Woerter
-Mydriasis
-Miosis
-beidseits
+# Liste kompakt halten und mit dem echten Tokenizer nachmessen, nicht einfach
+# nach Zeichenzahl schaetzen.
