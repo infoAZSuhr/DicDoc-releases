@@ -19,7 +19,8 @@ bearbeiten, Zeile hinzufügen, committen.
 ## Installation auf einem Praxis-PC
 
 **Einfachste Variante** (PowerShell, ohne Adminrechte): lädt die neueste Version herunter
-und richtet den Autostart ein.
+und richtet Autostart sowie eine Startmenü-Verknüpfung ein (zum Wiederfinden nach einem
+"Beenden" - über die Windows-Suche nach "DicDoc").
 
 ```powershell
 irm https://raw.githubusercontent.com/infoAZSuhr/DicDoc-releases/main/install.ps1 | iex

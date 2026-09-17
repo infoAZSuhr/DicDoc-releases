@@ -2,8 +2,9 @@
 #
 # Laedt die neueste DicDoc-Version herunter, legt sie unter einem festen
 # Dateinamen ab (wichtig fuer das automatische Selbst-Update der App) und
-# richtet einen Autostart-Eintrag ein (Start beim Windows-Login, minimiert
-# im System-Tray).
+# richtet einen Autostart-Eintrag (Start beim Windows-Login, minimiert im
+# System-Tray) sowie eine Startmenue-Verknuepfung ein (damit man die App
+# nach einem "Beenden" ueber die Windows-Suche wiederfindet).
 #
 # Ausfuehren (PowerShell):
 #   irm https://raw.githubusercontent.com/infoAZSuhr/DicDoc-releases/main/install.ps1 | iex
@@ -33,18 +34,28 @@ Get-Process -Name "DicDoc" -ErrorAction SilentlyContinue | Stop-Process -Force
 Write-Host "Lade herunter nach $exePath ..."
 Invoke-WebRequest -Uri $asset.browser_download_url -OutFile $exePath
 
+$shell = New-Object -ComObject WScript.Shell
+
 # Autostart-Verknuepfung anlegen (startet minimiert im Tray beim Windows-Login)
 $startupFolder = [Environment]::GetFolderPath("Startup")
-$shortcutPath = Join-Path $startupFolder "DicDoc.lnk"
-$shell = New-Object -ComObject WScript.Shell
-$shortcut = $shell.CreateShortcut($shortcutPath)
-$shortcut.TargetPath = $exePath
-$shortcut.WorkingDirectory = $installDir
-$shortcut.Save()
+$startupShortcut = $shell.CreateShortcut((Join-Path $startupFolder "DicDoc.lnk"))
+$startupShortcut.TargetPath = $exePath
+$startupShortcut.WorkingDirectory = $installDir
+$startupShortcut.IconLocation = $exePath
+$startupShortcut.Save()
+
+# Startmenue-Verknuepfung anlegen (zum Wiederfinden nach einem "Beenden")
+$startMenuFolder = [Environment]::GetFolderPath("Programs")
+$startMenuShortcut = $shell.CreateShortcut((Join-Path $startMenuFolder "DicDoc.lnk"))
+$startMenuShortcut.TargetPath = $exePath
+$startMenuShortcut.WorkingDirectory = $installDir
+$startMenuShortcut.IconLocation = $exePath
+$startMenuShortcut.Save()
 
 Write-Host ""
 Write-Host "Fertig. DicDoc ist installiert unter: $exePath"
 Write-Host "Autostart eingerichtet - startet automatisch (minimiert im Tray) beim naechsten Windows-Login."
+Write-Host "Ueber die Windows-Suche ('DicDoc') oder das Startmenue laesst es sich jederzeit oeffnen."
 Write-Host ""
 
 $startNow = Read-Host "Jetzt starten? (j/n)"
